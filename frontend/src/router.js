@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HelloWorld from "./views/HelloWorld.vue";
-import Testing from "./views/Testing.vue";
+import CreateFlashcard from "./views/CreateFlashcard.vue";
+
 
 
 export default createRouter({
@@ -8,11 +8,7 @@ export default createRouter({
   routes: [
     {
       path: "/",
-      component: HelloWorld,
-    },
-    {
-      path: "/testing",
-      component: Testing,
+      component: CreateFlashcard,
     },
   ],
 });
