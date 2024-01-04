@@ -1,4 +1,5 @@
 // main.go
+// file currently useless was using it to begin with will use it again at end of users work
 package main
 
 import (
