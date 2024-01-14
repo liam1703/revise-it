@@ -20,7 +20,7 @@ func DBinstance() *mongo.Client {
 		log.Fatal("Error loading .env file")
 	}
 
-	MongoDb := os.Getenv("MONGODB_URI")
+	MongoDb := os.Getenv("MONGOURI")
 
 	client, err := mongo.NewClient(options.Client().ApplyURI(MongoDb))
 	if err != nil {
