@@ -1,18 +1,39 @@
-// main.go
-// file currently useless was using it to begin with will use it again at end of users work
 package main
 
 import (
+	"os"
+
+	middleware "revise-it/backend/middleware"
+	routes "revise-it/backend/routes"
+
 	"github.com/gin-gonic/gin"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 func main() {
-	// Create a new Gin router
-	router := gin.Default()
+	port := os.Getenv("PORT")
 
-	// Connect to database
-	// configs.ConnectDB()
+	if port == "" {
+		port = "8000"
+	}
 
-	// Start the server
-	router.Run(":8080")
+	router := gin.New()
+	router.Use(gin.Logger())
+	routes.UserRoutes(router)
+
+	router.Use(middleware.Authentication())
+
+	// API-2
+	router.GET("/api-1", func(c *gin.Context) {
+
+		c.JSON(200, gin.H{"success": "Access granted for api-1"})
+
+	})
+
+	// API-1
+	router.GET("/api-2", func(c *gin.Context) {
+		c.JSON(200, gin.H{"success": "Access granted for api-2"})
+	})
+
+	router.Run(":" + port)
 }
