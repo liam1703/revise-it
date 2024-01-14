@@ -11,6 +11,7 @@
   <label for="answer" class="text-sm font-medium">Your Answer:</label>
   <textarea id="answer" rows="6" class="mt-5 p-1 w-full text-sm  bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
   placeholder="Write your answer here..."
+  v-model="answer"
   >
   </textarea>
 </div>
@@ -26,7 +27,7 @@ const question = ref('');
 const answer = ref('');
 
 function showQuestion() {
-  console.log(question.value);
+  console.log(question.value, answer.value);
 }
 </script>
 
