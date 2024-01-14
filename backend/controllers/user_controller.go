@@ -12,6 +12,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 
 	"revise-it/backend/database"
+	helper "revise-it/backend/helpers"
 	"revise-it/backend/models"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -73,14 +74,6 @@ func SignUp() gin.HandlerFunc {
 
 		password := HashPassword(*user.Password)
 		user.Password = &password
-
-		count, err = userCollection.CountDocuments(ctx, bson.M{"phone": user.Phone})
-		defer cancel()
-		if err != nil {
-			log.Panic(err)
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "error occured while checking for the phone number"})
-			return
-		}
 
 		if count > 0 {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "this email or phone number already exists"})
