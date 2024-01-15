@@ -18,6 +18,7 @@
 <div class="mt-12 w-1/2 mx-auto">
   <button class="border border-solid p-3 rounded bg-red-300" @click="showQuestion">Create card</button>
 </div>
+
 </template>
 
 <script setup>
