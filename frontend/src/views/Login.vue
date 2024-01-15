@@ -5,14 +5,13 @@
       <div class="bg-white shadow-xl w-96 p-4 rounded-xl mx-auto mt-16">
         <h3 class="mb-3">Log into your Revise-it account.</h3>
         <label for="email" class="text-sm font-medium">Email:</label>
-        <input id="email" type="text" class="mt-2 p-2 text-lg w-full rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+        <input id="email" type="text" class="mt-2 mb-4 p-2 text-lg w-full rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+        <label for="password" class="text-sm font-medium">Password:</label>
+        <input id="password" type="password" class="mt-2 p-2 text-lg w-full rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
 </script>
