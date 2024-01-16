@@ -8,6 +8,9 @@
         <input v-model="email" id="email" type="text" class="mt-2 mb-4 p-2 text-lg w-full rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
         <label for="password" class="text-sm font-medium">Password:</label>
         <input v-model="password" id="password" type="password" class="mt-2 p-2 text-lg w-full rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+        <div>
+          <router-link to="/sign-up"><p>Dont have an account sign up here?</p></router-link>
+        </div>
         <div class="mt-12 text-center">
           <button class="border border-solid p-3 rounded background-base">Login</button>
         </div>
