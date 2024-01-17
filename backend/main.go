@@ -6,6 +6,7 @@ import (
 	middleware "revise-it/backend/middleware"
 	routes "revise-it/backend/routes"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	_ "github.com/heroku/x/hmetrics/onload"
 )
@@ -19,6 +20,8 @@ func main() {
 
 	router := gin.New()
 	router.Use(gin.Logger())
+	router.Use(cors.Default())
+
 	routes.UserRoutes(router)
 
 	router.Use(middleware.Authentication())

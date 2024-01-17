@@ -104,10 +104,11 @@ func SignUp() gin.HandlerFunc {
 //Login is the api used to tget a single user
 func Login() gin.HandlerFunc {
 	return func(c *gin.Context) {
+		fmt.Println("login")
 		var ctx, cancel = context.WithTimeout(context.Background(), 100*time.Second)
 		var user models.User
 		var foundUser models.User
-
+		fmt.Println("login")
 		if err := c.BindJSON(&user); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 			return
