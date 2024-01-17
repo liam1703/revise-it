@@ -12,7 +12,7 @@
           <router-link to="/sign-up"><p>Dont have an account sign up here?</p></router-link>
         </div>
         <div class="mt-12 text-center">
-          <button class="border border-solid p-3 rounded background-base">Login</button>
+          <button class="border border-solid p-3 rounded background-base text-white" @click="handleLogin">Login</button>
         </div>
       </div>
     </div>
@@ -21,7 +21,16 @@
 
 <script setup>
 import { ref } from "vue";
+import { apiAxios } from "../lib/axios";
 
 const email = ref('');
 const password = ref('');
+
+async function handleLogin() {
+  const { data } = await apiAxios.post(`/users/login`, {
+    email: email.value,
+    password: password.value,
+  });
+  console.log("logged", data);
+}
 </script>
