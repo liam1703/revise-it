@@ -22,9 +22,12 @@ func main() {
 	router.Use(gin.Logger())
 	router.Use(cors.Default())
 	routes.HealthcheckRoutes(router)
+	routes.DeckRoutes(router)
+	// put routes here that dont require authentication
 	routes.UserRoutes(router)
 
 	router.Use(middleware.Authentication())
 
+	// put routes here that require authentication
 	router.Run(":" + port)
 }
