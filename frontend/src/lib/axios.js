@@ -2,10 +2,10 @@ import axios from "axios";
 
 axios.defaults.withCredentials = true;
 axios.defaults.headers["X-Requested-With"] = "XMLHttpRequest";
-axios.defaults.baseURL = process.env.VITE_BASE_URL;
+axios.defaults.baseURL = "http://localhost:8000";
 
 const apiAxios = axios.create({
-  baseURL: process.env.VITE_BASE_URL,
+  baseURL: "http://localhost:8000",
 });
 
 export { apiAxios };
