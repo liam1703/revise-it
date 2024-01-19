@@ -12,10 +12,10 @@
           <div class="my-2">
             <router-link to="/sign-up"><p>Dont have an account sign up here?</p></router-link>
           </div>
+        </form>
           <div class="mt-12 text-center">
             <button class="border border-solid p-3 rounded background-base text-white" @click="handleLogin">Login</button>
           </div>
-        </form>
       </div>
     </div>
   </div>
@@ -24,6 +24,7 @@
 <script setup>
 import { ref } from "vue";
 import { apiAxios } from "../lib/axios";
+import {firstName, lastName, userEmail, userId} from "../composables/identity";
 
 const email = ref('');
 const password = ref('');
@@ -34,5 +35,9 @@ async function handleLogin() {
     password: password.value,
   });
   console.log("logged", data);
+  firstName.value = data.first_name;
+  lastName.value = data.last_name;
+  userEmail.value = data.email;
+  userId.value = data.user_id;
 }
 </script>
