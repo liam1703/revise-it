@@ -24,7 +24,7 @@
 <script setup>
 import { ref } from "vue";
 import { apiAxios } from "../lib/axios";
-import {firstName, lastName, userEmail, userId} from "../composables/identity";
+import {firstName, isLoggedIn, lastName, userEmail, userId} from "../composables/identity";
 
 const email = ref('');
 const password = ref('');
@@ -39,5 +39,8 @@ async function handleLogin() {
   lastName.value = data.last_name;
   userEmail.value = data.email;
   userId.value = data.user_id;
+  if (data.user_id) {
+    isLoggedIn.value = true;
+  }
 }
 </script>
