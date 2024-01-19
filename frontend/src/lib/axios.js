@@ -5,7 +5,7 @@ import axios from "axios";
 // axios.defaults.baseURL = "http://127.0.0.1:8000";
 
 const apiAxios = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "http://127.0.0.1:8006",
 });
 
 export { apiAxios };
