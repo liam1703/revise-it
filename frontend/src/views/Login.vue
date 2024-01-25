@@ -30,6 +30,7 @@ const email = ref('');
 const password = ref('');
 
 async function handleLogin() {
+  console.log("logging in");
   const { data } = await apiAxios.post(`/users/login`, {
     email: email.value,
     password: password.value,
