@@ -2,4 +2,4 @@
 .env
 /backend/.env/
 /backend/.env
-
+backend/.env
