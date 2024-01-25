@@ -1,9 +1,24 @@
 # revise-it
 
-Backend for ReviseIt
+Flashcard revision app, build your own revision cards and test yourself.
 
-//TODO: BASH SCRIPT TO RUN THE APP
+Plan: rate how hard card was and then that will determine how often it is shown again.
 
-Golang built with gin and a mongodb to run:
-``` cd backend```
-```go run main.go```
+
+Frontend: Vue.js + Tailwind
+Requires MongoDB
+Backend: Go (Gin)
+
+start front end:
+```
+cd frontend
+npm run dev
+
+```
+
+start backend:
+```
+cd backend
+go run main.go
+
+```
