@@ -1,8 +1,8 @@
 <template>
-  <nav-bar />
+  <navbar />
   <h1>My Decks</h1>
 </template>
 
 <script setup>
-import N from '../components/Navbar.vue';
+import Navbar from '../components/Navbar.vue';
 </script>
