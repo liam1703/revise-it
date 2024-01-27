@@ -1,6 +1,6 @@
 <template>
   <navbar />
-  <h1>My Decks</h1>
+  <h1 class="text-4xl text-center mt-12">My Decks</h1>
 </template>
 
 <script setup>
