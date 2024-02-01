@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-200 h-screen w-screen">
+  <div class="h-screen w-screen">
     <navbar />
     <div class="w-screen">
       <h1 class="text-center text-6xl mt-16 font-semibold text-indigo-600">Revision backed by science.</h1>
