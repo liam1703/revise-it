@@ -4,8 +4,8 @@
     <div>
       <h1 class="text-center text-6xl mt-16 font-semibold">Revision backed by science.</h1>
       <h4 class="text-center text-xl mt-8">Create questions and learn using active recall.</h4>
-      <div class="mx-auto">
-        <button class="text-center">Begin learning</button>
+      <div class="text-center w-screen mt-6">
+        <button class="text-center border border-solid bg-purple-600 text-white p-3 hover:rounded-lg">Begin learning</button>
       </div>
 
     </div>
