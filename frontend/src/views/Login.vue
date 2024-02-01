@@ -1,8 +1,8 @@
 <template>
-  <div class="h-screen w-screen bg-slate-100">
+  <div class="h-screen w-screen">
     <div class="w-full  pt-24">
       <router-link to="/" class="cursor-pointer"><h1 class="text-4xl text-center">Revise-it</h1></router-link>
-      <div class="bg-white shadow-xl w-96 p-4 rounded-xl mx-auto mt-16">
+      <div class="bg-gray-100 shadow-xl w-96 p-8 rounded-xl mx-auto mt-16">
         <h3 class="mb-3">Log into your Revise-it account.</h3>
         <form>
           <label for="email" class="text-sm font-medium">Email:</label>
