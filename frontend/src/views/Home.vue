@@ -8,7 +8,7 @@
         <button @click.prevent="goToSignup" class="text-center border border-solid bg-purple-600 text-white p-3 hover:rounded-lg">Begin learning</button>
       </div>
       <div class="bg-gray-300 text-center rounded-lg w-10/12 mx-auto mt-24 p-8">
-        <h5 class="text-indigo-600 font-bold text-xl">What do we do?</h5>
+        <h5 class="text-indigo-600 font-bold text-xl animate-bounce">What do we do?</h5>
       </div>
     </div>
   </div>
