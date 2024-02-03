@@ -2,7 +2,7 @@
   <navbar />
   <h1 class="text-4xl text-center my-12">My Decks</h1>
   <div class="flex w-screen justify-center">
-  <div class="lg:gap-8 w-full lg:w-3/4 xl:w-7/12 grid grid-cols-3 grid-rows-3">
+  <div class="sm:gap-4 w-full lg:w-2/3 xl:w-7/12 sm:grid lg:grid-cols-3 sm:grid-cols-2">
     <create-deck-card />
     <template v-for="deck in decks" v-bind:key="deck">
       <deck-card  :deck="deck"/>
