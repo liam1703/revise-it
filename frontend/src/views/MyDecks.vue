@@ -1,7 +1,14 @@
 <template>
   <navbar />
   <h1 class="text-4xl text-center mt-12">My Decks</h1>
-  <create-deck-card />
+  <div class="w-full">
+    <create-deck-card />
+    <template v-for="deck in decks" v-bind:key="deck">
+      {{ deck }}
+      <deck-card  />
+    </template>
+  </div>
+
 
 </template>
 
@@ -9,4 +16,7 @@
 import Navbar from '../components/Navbar.vue';
 import CreateDeckCard from '../components/CreateDeckCard.vue';
 // createdeckcard is a bad name?
+import DeckCard from '../components/DeckCard.vue';
+
+const decks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 </script>
