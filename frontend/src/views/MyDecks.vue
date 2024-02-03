@@ -1,11 +1,10 @@
 <template>
   <navbar />
   <h1 class="text-4xl text-center mt-12">My Decks</h1>
-  <div class="w-full">
+  <div class="w-full grid gap-4 grid-cols-3 grid-rows-3">
     <create-deck-card />
     <template v-for="deck in decks" v-bind:key="deck">
-      {{ deck }}
-      <deck-card  />
+      <deck-card  :deck="deck"/>
     </template>
   </div>
 
