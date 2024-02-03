@@ -1,10 +1,18 @@
 <template>
-    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <slot></slot>
-        </div>
+  <div
+    class="fixed w-screen h-screen z-100 inset-0 bg-grey-900/40 backdrop-blur"
+  >
+    <div
+      class="fixed px-5 z-100 bg-white rounded-t-2xl sm:rounded-t-lg mx-auto my-auto translate-y-0 inset-0 items-center transition-all rounded-lg shadow-xl sm:px-12 flex flex-col justify-between overflow-y-hidden md:h-1/2 md:h-5/12 xl:h-1/3 sm:max-h-80 h-screen w-screen sm:max-w-3xl"
+      aria-modal="true"
+    >
+      <div class="flex flex-col w-full py-7 overflow-hidden">
+        <slot></slot>
       </div>
+
+    </div>
+
+</div>
 </template>
 
 <script setup>
