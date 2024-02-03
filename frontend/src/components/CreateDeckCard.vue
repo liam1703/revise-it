@@ -8,7 +8,11 @@
       </p>
     </button>
   </div>
-
+  <TheModal v-if="createDeckModal" >
+    <div>
+      yo yo yo
+    </div>
+  </TheModal>
 
 
 
@@ -16,5 +20,6 @@
 
 <script setup>
 import { ref } from 'vue';
+import TheModal from './TheModal.vue';
 const createDeckModal = ref(false);
 </script>

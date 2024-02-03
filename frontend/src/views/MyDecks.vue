@@ -8,7 +8,7 @@
       <deck-card  :deck="deck"/>
     </template>
   </div>
-</div>s
+</div>
 </template>
 
 <script setup>
