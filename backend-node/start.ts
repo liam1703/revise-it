@@ -4,7 +4,7 @@ async function start() {
 
     const app = await createServer();
     app.listen(4112, () =>
-    console.log(`***** Server running at port ${port} *****`)
+    console.log(`***** Server running at port ${4112} *****`)
     );
 }
 
