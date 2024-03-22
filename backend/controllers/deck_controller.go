@@ -13,7 +13,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
-var deckCollection *mongo.Collection = database.OpenCollection(database.Client, "deck")
+var deckCollection *mongo.Collection = database.OpenCollection(database.Client, "decks")
 
 func AddDeck() gin.HandlerFunc {
 	return func(c *gin.Context) {
@@ -38,18 +38,20 @@ func AddDeck() gin.HandlerFunc {
 		deck.ID = primitive.NewObjectID()
 
 		fmt.Println(ctx, "deck", deck)
-		fmt.Println("Made it to the end")
+		fmt.Println("Made it to the end", deckCollection)
 
-		// resultInsertionNumber, insertErr := userCollection.InsertOne(ctx, user)
-		// if insertErr != nil {
-		// 	msg := fmt.Sprintf("Deck item was not created")
-		// 	c.JSON(http.StatusInternalServerError, gin.H{"error": msg})
-		// 	return
-		// }
+		_, insertErr := deckCollection.InsertOne(ctx, deck)
+		if insertErr != nil {
+			msg := "Deck item was not created"
+			c.JSON(http.StatusInternalServerError, gin.H{"error": msg, "insertErr": insertErr.Error()})
+			return
+		}
 		defer cancel()
 	}
 }
 
+// get all decks for a user
+
 // func for deleting deck
 
-// get all decks for a user
+
