@@ -7,11 +7,10 @@ export const database = new Mongoose();
 
 
 export default async function connectDatabase() {
-  const DbUrl = process.env.DATABASE_URL;
-  await database.connect(DbUrl, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  });
-  console.log("***** Database connected *****");
+    const DbUrl = process.env.DATABASE_URL;
+    await database.connect(DbUrl, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
+    console.log("***** Database connected *****");
 }

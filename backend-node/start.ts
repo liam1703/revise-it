@@ -2,7 +2,7 @@ import createServer from "./server";
 import connectDatabase from "./db";
 
 async function start() {
-    connectDatabase()
+    await connectDatabase()
     const app = await createServer();
     app.listen(4112, () =>
     console.log(`***** Server running at port ${4112} *****`)
